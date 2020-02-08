@@ -1,56 +1,55 @@
 <?php
 
-    // helper functions
+// helper functions
 
-    function redirect($location){
+function redirect($location)
+{
 
-        header("Location: $location");
+    header("Location: $location");
+}
 
-    }
+function query($sql)
+{
 
-    function query($sql){
+    global $connection;
+    return mysqli_query($connection, $sql);
+}
+function confirm($result)
+{
 
-        global $connection;
-        return mysqli_query($connection , $sql);
+    global $connection;
 
+    if (!$result) {
 
-    }
-    function confirm($result){
-
-        global $connection;
-        
-        if(!$result) {
-        
         die("QUERY FAILED " . mysqli_error($connection));
-        
-        
-            }
-        
-        
-        }
-    function escape_string($string){
-        global $connection;
-        return mysqli_real_escape_string($connection , $string);
     }
+}
+function escape_string($string)
+{
+    global $connection;
+    return mysqli_real_escape_string($connection, $string);
+}
 
-    function fetch_array($result){
-        return mysqli_fetch_array($result);
-    }
+function fetch_array($result)
+{
+    return mysqli_fetch_array($result);
+}
 
 
 
 /*********************************************Front End FUnctions***************************************/
 
 
-    // get products
-    function get_products(){
+// get products
+function get_products()
+{
 
 
-     $query = query(" SELECT * FROM products");
-     confirm($query);
-     while($row = fetch_array($query)){
+    $query = query(" SELECT * FROM products");
+    confirm($query);
+    while ($row = fetch_array($query)) {
 
-$product = <<<DELIMETER
+        $product = <<<DELIMETER
 
 <div class="col-sm-4 col-lg-4 col-md-4">
 <div class="thumbnail">
@@ -67,46 +66,47 @@ $product = <<<DELIMETER
 </div>
 
 DELIMETER;
-echo $product;
-
-     }
+        echo $product;
+    }
 
     //  put ? question mark to send the parameter in the url
 
 }
-function get_categories(){
+function get_categories()
+{
 
 
-$query = query("SELECT * FROM categories");
-confirm($query);
+    $query = query("SELECT * FROM categories");
+    confirm($query);
 
-while($row = fetch_array($query)){
+    while ($row = fetch_array($query)) {
 
 
-$categories_links = <<<DELIMETER
+        $categories_links = <<<DELIMETER
 
 <a href='category.php?id={$row['cat_id']}' class='list-group-item'>{$row['cat_title']}</a>
 
         
 DELIMETER;
 
-echo $categories_links;
+        echo $categories_links;
+    }
 }
-}
 
 
 
 
 
 
-function get_products_in_cat_page(){
+function get_products_in_cat_page()
+{
 
 
-    $query = query(" SELECT * FROM products WHERE product_category_id = " . escape_string($_GET['id']). " ");
+    $query = query(" SELECT * FROM products WHERE product_category_id = " . escape_string($_GET['id']) . " ");
     confirm($query);
-    while($row = fetch_array($query)){
+    while ($row = fetch_array($query)) {
 
-$product = <<<DELIMETER
+        $product = <<<DELIMETER
 
 <div class="col-md-3 col-sm-6 hero-feature">
 <div class="thumbnail">
@@ -122,11 +122,10 @@ $product = <<<DELIMETER
 </div>
 
 DELIMETER;
-echo $product;
-
+        echo $product;
     }
 
-   //  put ? question mark to send the parameter in the url
+    //  put ? question mark to send the parameter in the url
 
 }
 
@@ -138,14 +137,15 @@ echo $product;
 
 
 
-function get_products_in_shop_page(){
+function get_products_in_shop_page()
+{
 
 
     $query = query(" SELECT * FROM products");
     confirm($query);
-    while($row = fetch_array($query)){
+    while ($row = fetch_array($query)) {
 
-$product = <<<DELIMETER
+        $product = <<<DELIMETER
 
 <div class="col-md-3 col-sm-6 hero-feature">
 <div class="thumbnail">
@@ -161,11 +161,10 @@ $product = <<<DELIMETER
 </div>
 
 DELIMETER;
-echo $product;
-
+        echo $product;
     }
 
-   //  put ? question mark to send the parameter in the url
+    //  put ? question mark to send the parameter in the url
 
 }
 
@@ -196,6 +195,3 @@ echo $product;
 
 
 /*********************************************Back End FUnctions ***************************************/
-
-
-?>
