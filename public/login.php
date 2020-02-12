@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Shop Homepage</title>
+    <title>Shop Homepage</title> 
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -82,7 +82,7 @@
                 </div>
 
                 <div class="form-group">
-                  <input type="submit" name="submit" class="btn btn-primary" >
+                  <input type="submit" name="submit" class="btn btn-success" >
                 </div>
             </form>
         </div>  
