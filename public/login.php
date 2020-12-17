@@ -57,7 +57,7 @@
                         <a href="checkout.php">Checkout</a>
                     </li>
                     <li>
-                        <a href="contact.html">Contact</a>
+                        <a href="contact.php">Contact</a>
                     </li>
 
                 </ul>
