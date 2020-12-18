@@ -78,7 +78,7 @@
                         <a href="bootstrap-elements.php"><i class="fa fa-fw fa-desktop"></i> Categories</a>
                     </li>
                     <li>
-                        <a href="bootstrap-grid.html"><i class="fa fa-fw fa-wrench"></i>Orders</a>
+                        <a href="bootstrap-grid.php"><i class="fa fa-fw fa-wrench"></i>Orders</a>
                     </li>
                 
                 </ul>
