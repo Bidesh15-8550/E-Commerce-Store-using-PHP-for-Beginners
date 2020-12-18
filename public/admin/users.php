@@ -71,7 +71,7 @@
                         <a href="charts.php"><i class="fa fa-fw fa-bar-chart-o"></i> View Products</a>
                     </li>
                     <li>
-                        <a href="tables.html"><i class="fa fa-fw fa-table"></i> Add Product</a>
+                        <a href="tables.php"><i class="fa fa-fw fa-table"></i> Add Product</a>
                     </li>
                     
                     <li>
