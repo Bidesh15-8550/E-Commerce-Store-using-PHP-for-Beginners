@@ -71,14 +71,14 @@
                         <a href="charts.php"><i class="fa fa-fw fa-bar-chart-o"></i> View Products</a>
                     </li>
                     <li>
-                        <a href="tables.html"><i class="fa fa-fw fa-table"></i> Add Product</a>
+                        <a href="tables.php"><i class="fa fa-fw fa-table"></i> Add Product</a>
                     </li>
                     
                     <li>
-                        <a href="bootstrap-elements.html"><i class="fa fa-fw fa-desktop"></i> Categories</a>
+                        <a href="bootstrap-elements.php"><i class="fa fa-fw fa-desktop"></i> Categories</a>
                     </li>
                     <li>
-                        <a href="bootstrap-grid.html"><i class="fa fa-fw fa-wrench"></i>Orders</a>
+                        <a href="bootstrap-grid.php"><i class="fa fa-fw fa-wrench"></i>Orders</a>
                     </li>
                 
                 </ul>
